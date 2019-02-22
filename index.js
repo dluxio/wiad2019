@@ -100,9 +100,10 @@ function startApp() {
 
 
   processor.on('thinking', function(json, from) {
+console.log(from + 'found thinking')
     if(state[from] != undefined){
       state[from].thinking = 1,
-      state[from].last = getTime()
+      state[from].last = Date.now()
     }else{
       state[from] = {
         username:from,
@@ -112,14 +113,15 @@ function startApp() {
         collaboration:0,
         curiosity:0,
         humility:0,
-        last:getTime()
+        last:Date.now()
       }
     }
   });
   processor.on('empathy', function(json, from) {
+console.log(from + 'found empathy')
     if(state[from] != undefined){
       state[from].empathy = 1,
-      state[from].last = getTime()
+      state[from].last = Date.now()
     }else{
       state[from] = {
         username:from,
@@ -129,14 +131,15 @@ function startApp() {
         collaboration:0,
         curiosity:0,
         humility:0,
-        last:getTime()
+        last:Date.now()
       }
     }
   });
   processor.on('ethics', function(json, from) {
+	console.log(from + 'found ethics')
     if(state[from] != undefined){
       state[from].ethics = 1,
-      state[from].last = getTime()
+      state[from].last = Date.now()
     }else{
       state[from] = {
         username:from,
@@ -146,14 +149,15 @@ function startApp() {
         collaboration:0,
         curiosity:0,
         humility:0,
-        last:getTime()
+        last:Date.now()
       }
     }
   });
   processor.on('collaboration', function(json, from) {
+console.log(from + 'found collaboration')
     if(state[from] != undefined){
       state[from].collaboration = 1,
-      state[from].last = getTime()
+      state[from].last = Date.now()
     }else{
       state[from] = {
         username:from,
@@ -163,14 +167,15 @@ function startApp() {
         collaboration:1,
         curiosity:0,
         humility:0,
-        last:getTime()
+        last:Date.now()
       }
     }
   });
   processor.on('curiosity', function(json, from) {
+console.log(from + 'found curiosity')
     if(state[from] != undefined){
       state[from].curiosity = 1,
-      state[from].last = getTime()
+      state[from].last = Date.now()
     }else{
       state[from] = {
         username:from,
@@ -180,14 +185,15 @@ function startApp() {
         collaboration:0,
         curiosity:1,
         humility:0,
-        last:getTime()
+        last:Date.now()
       }
     }
   });
   processor.on('humility', function(json, from) {
+console.log(from + 'found humility')
     if(state[from] != undefined){
       state[from].humility = 1,
-      state[from].last = getTime()
+      state[from].last = Date.now()
     }else{
       state[from] = {
         username:from,
@@ -197,7 +203,7 @@ function startApp() {
         collaboration:0,
         curiosity:0,
         humility:1,
-        last:getTime()
+        last:Date.now()
       }
     }
   });
