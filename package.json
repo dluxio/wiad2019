@@ -1,0 +1,25 @@
+{
+  "name": "dlux-event-wiad",
+  "version": "1.0.0",
+  "description": "dlux steem-state event instance",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "dlux",
+    "steem",
+    "steem-state",
+    "wiad"
+  ],
+  "author": "disregardfiat",
+  "license": "MIT",
+  "dependencies": {
+    "dsteem": "^0.11.2",
+    "express": "^4.16.4",
+    "steem": "^0.7.3",
+    "steem-state": "^1.2.0",
+    "steem-transact": "^1.0.2"
+  }
+}
