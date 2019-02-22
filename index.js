@@ -42,7 +42,7 @@ app.get('/', (req, res, next) => {
   c1.sort(function(a, b){return a.last - b.last})
 console.log(c1)
   op = c6.concat(c5,c4,c3,c2,c1)
-  for (var i = 0;i<op.length;i++){op[i].rank = i}
+  for (var i = 0;i<op.length;i++){op[i].rank = i+1}
   res.send(op)
 });
 app.listen(port, () => console.log(`DLUX token API listening on port ${port}!`))
