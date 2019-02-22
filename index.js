@@ -13,7 +13,7 @@ const rl = readline.createInterface({
 
 const app = express()
 const port = ENV.PORT || 3000;
-app.use(cors)
+app.use(cors())
 app.get('/', (req, res, next) => {
   let op = [], c1 = [], c2 = [], c3 = [], c4 = [], c5 = [], c6 = []
   for (var name in state){
