@@ -25,7 +25,6 @@ app.get('/', (req, res, next) => {
     if(state[name].humility)i++
     state[name].found = i
   }
-	console.log(state)
   for (var name in state){
     if (state[name].found==6)c6.push(state[name])
     if (state[name].found==5)c5.push(state[name])
@@ -40,7 +39,6 @@ app.get('/', (req, res, next) => {
   c3.sort(function(a, b){return a.last - b.last})
   c2.sort(function(a, b){return a.last - b.last})
   c1.sort(function(a, b){return a.last - b.last})
-console.log(c1)
   op = c6.concat(c5,c4,c3,c2,c1)
   for (var i = 0;i<op.length;i++){op[i].rank = i+1}
   res.send(op)
