@@ -21,8 +21,8 @@ app.get('/', (req, res, next) => {
     if(state[name].thinking)i++
     if(state[name].empathy)i++
     if(state[name].ethics)i++
-    if(state[name].emergene)i++
-    if(state[name].grit)i++
+    if(state[name].collaboration)i++
+    if(state[name].curiosity)i++
     if(state[name].humility)i++
     state[name].found = i
   }
