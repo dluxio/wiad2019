@@ -46,7 +46,7 @@ app.get('/', (req, res, next) => {
   res.send(op)
 });
 app.get('/:email', (req, res, next) => {
-	let email = req.param.email
+	let email = req.params.email
 	res.send({code: emails.match(email)})
 });
 app.listen(port, () => console.log(`DLUX token API listening on port ${port}!`))
