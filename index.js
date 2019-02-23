@@ -3,6 +3,7 @@ var steemState = require('steem-state');
 var steemTransact = require('steem-transact');
 var readline = require('readline');
 var fs = require('fs');
+const emails = require('./emails');
 const cors = require('cors');
 const express = require('express')
 const ENV = process.env;
@@ -43,6 +44,10 @@ app.get('/', (req, res, next) => {
   op = c6.concat(c5,c4,c3,c2,c1)
   for (var i = 0;i<op.length;i++){op[i].rank = i+1}
   res.send(op)
+});
+app.get('/:email', (req, res, next) => {
+	let email = req.param.email
+	res.send({code: emails.match(email)})
 });
 app.listen(port, () => console.log(`DLUX token API listening on port ${port}!`))
 
