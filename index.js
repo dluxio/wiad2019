@@ -60,26 +60,6 @@ var client = new steem.Client(clientURL);
 var processor;
 
 var state = {
-  markegiles:{
-        username:'markegiles',
-        thinking:0,
-        empathy:0,
-        ethics:0,
-        collaboration:0,
-        curiosity:0,
-        humility:0,
-        last:16
-      },
-  disregardfiat:{
-        username:'disregardfiat',
-        thinking:0,
-        empathy:0,
-        ethics:0,
-        collaboration:0,
-        curiosity:0,
-        humility:0,
-        last:151
-      }
 }
 
 if(fs.existsSync(stateStoreFile)) {
